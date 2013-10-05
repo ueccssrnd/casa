@@ -1,7 +1,7 @@
 <?php
 include 'views/templates.php';
 
-generateHeader('Museum', array('type', 'museum'));
+generateHeader('Museum', array('type', 'museum', 'refineslide'));
 ?>
 <!-- navigation ends here -->
 <!-- start different pages of my parallax thing -->
@@ -15,17 +15,44 @@ generateHeader('Museum', array('type', 'museum'));
         <h1>The Casa San Miguel Museum</h1>
         <div class="col-md-12">
             <p class="lead">The Museum of Community Heritage is a unique experience that focuses on the rich local heritage of San Antonio as a town and San Miguel as a barrio. Visitors will be presented with a view of history from the perspective of a provincial town and barrio, from its founding to present day, relate it to Philippine history and World events as well as highlight the rich natural heritage. Visitors will see actual artifacts as well as visual representations of events and stories. 
-</p>
+            </p>
         </div>
         <div class="col-md-12">
-            <ul class="unstyled">
-                <li>5 beautifully appointed guest rooms</li>
-                <li>each including non smoking rooms, fan, air conditioning, internet access – LAN (complimentary), shower. </li>
-                <li>The hotel offers many unique recreational opportunities such as garden. When you are looking for comfortable and convenient accommodations in Subic (Zambales), make Casa San Miguel Bed and Breakfast your home away from home.</li>
+            <ul class="rs-slider" style="">
+                <li><img src="public/images/museum-photographs.jpg" alt="Historical Photographs"/>
+                    <div class="rs-caption rs-bottom">
+                        <h3>Historical photographs</h3>
+                        <p>Historical photographs (1905) of Aetas by American researcher William Allen Reed as well as videos and artifacts reflecting the rich Aeta heritage.</p>
+                    </div>
+                </li>
+                <li><img src="public/images/banner-museum.jpg" alt=""/>
+                    <div class="rs-caption rs-bottom">
+                        <h3>Fishy Friends</h3>
+                        <p>Exhibit of a 400 gallon aquarium showcasing a coral reef consisting of species of fish and coral  taken from the nearby reef of San Antonio.</p>
+                    </div>
+                </li>
+                <li><img src="public/images/museum-nico.jpg" alt=""/>
+                    <div class="rs-caption rs-bottom">
+                        <h3>Nico Sepe's Historical Photographs</h3>
+                        <p>Exhibit of photographs by Filipino veteran photojournalist Nico Sepe documenting the lives of fishermen from 1996 to the present.</p>
+                    </div>
+                </li>
+                <li><img src="public/images/museum-heritage.jpg" alt=""/>
+                    <div class="rs-caption rs-bottom">
+                        <h3>Our Cultural Heritage</h3>
+                        <p>Exhibit of traditional fishing equipment and paraphernalia, including bancas, nets, baskets, knives, lanterns, and other related artifacts.</p>
+                    </div>
+                </li>
+                <li><img src="public/images/museum-history.jpg" alt=""/>
+                    <div class="rs-caption rs-bottom">
+                        <h3>Historical photographs</h3>
+                        <p>Exhibit of lifestyle objects such as furniture and clothing from the local community, including kimonos, shoes, chairs and other period objects.</p>
+                    </div>
+                </li>
             </ul>
         </div>
         <div class="col-md-12">
-            <h2>Resident Artists</h2>
+            <h2>Rates and Tours</h2>
             <p>Loren ipsum chorva loo Loren ipsum chorva loo Loren ipsum chorva loo Loren ipsum chorva loo Loren ipsum chorva loo Loren ipsum chorva loo Loren ipsum chorva loo </p>
             <p>Loren ipsum chorva loo Loren ipsum chorva loo Loren ipsum chorva loo Loren ipsum chorva loo Loren ipsum chorva loo Loren ipsum chorva loo Loren ipsum chorva loo </p>
             <p>Loren ipsum chorva loo Loren ipsum chorva loo Loren ipsum chorva loo Loren ipsum chorva loo Loren ipsum chorva loo Loren ipsum chorva loo Loren ipsum chorva loo </p>
@@ -69,4 +96,4 @@ generateHeader('Museum', array('type', 'museum'));
 </div>
 </div>
 
-<?php generateFooter(); ?>
+<?php generateFooter(array('jquery.refineslide.min', 'museum')); ?>

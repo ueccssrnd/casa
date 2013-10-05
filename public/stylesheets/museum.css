@@ -1,3 +1,30 @@
 #museum-banner{
     background-image: url("../images/banner-museum.jpg");
 }
+
+.rs-caption{
+    background-color: rgba(0,0,0, 0.4);
+    color: #CCC;
+}
+
+.rs-bottom{
+    overflow: hidden;
+    
+}
+
+.rs-caption h3, .rs-caption p{
+    margin-left: 10px;
+    margin-top: 0.2em;
+} 
+
+.rs-wrap{
+    
+margin: 0 auto;
+opacity: 1;
+}
+
+
+.rs-slider{
+    padding-left: 0;
+    
+}

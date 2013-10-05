@@ -59,6 +59,6 @@ function generateHeader($title = 'CASA San Miguel | PEACE Program', $css = array
                     </html>
                     <?php
                     foreach ($js as $javascript) {
-                        ?> <script src="<?php echo $javascript; ?>"></script> <?php
+                        ?> <script src="public/javascripts/<?php echo $javascript; ?>.js"></script> <?php
                     }
                 }
