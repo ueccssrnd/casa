@@ -1,40 +1,13 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <title>CASA San Miguel | PEACE Program | Kapihan |</title>
-  <link rel="shortcut icon" type="image/x-icon" href="public/images/favicon.ico">
-  <link rel="stylesheet" href="public/vendor/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="public/vendor/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="public/stylesheets/styles.css">
-  <link rel="stylesheet" href="public/stylesheets/responsive.css">
-</head>
-<body>
-  <!-- do this #wrapper>#scroller thing for stellar in mobile-->
-  <div id="wrapper">
-    <div id="scroller">
-      <!-- navigation starts here -->
-      <nav id="navigation">
-        <div class="container">
-          <section class="branding col-md-4">
-            <img class="logo" src="public/images/logo.png" class="feature-image" alt="">
-            <h1 class="logo"> CASA San Miguel</h1>
-          </section>
-          <ul id="primary-nav" class="col-md-8">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Support</a></li>
-          </ul>
-        </div>
-      </nav>
+<?php include 'views/templates.php'; 
+
+ generateHeader();
+
+?>
       <!-- navigation ends here -->
       <!-- start different pages of my parallax thing -->
       <div id="edu-banner" class="parallax-1 screen-1 banner" data-stellar-background-ratio="0.3">
         <div class="container">
-          <h1>Education</h1>
+          <h1>Hotel</h1>
         </div>
       </div>
       <div id="edu-content" class="content screen-2 parallax-2">
@@ -93,11 +66,4 @@
     </div>
   </div>
   
-  <script src="public/vendor/jquery/jquery.min.js"></script>
-  <script src="public/vendor/jquery/jquery.nicescroll.js"></script>
-  <script src="public/vendor/jquery/jquery.stellar.js"></script>
-  <script src="public/vendor/jquery/jquery.sticky.js"></script>
-  <script src="public/javascripts/ticker.js"></script>
-  <script src="public/javascripts/core.js"></script>
-</body>
-</html>
+  <?php generateFooter(); ?>
