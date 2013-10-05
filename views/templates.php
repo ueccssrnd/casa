@@ -1,6 +1,6 @@
 <?php
 
-function generateHeader($css = array(), $title = 'CASA San Miguel | PEACE Program | Kapihan |') {
+function generateHeader($title = 'CASA San Miguel | PEACE Program', $css = array()) {
     ?>
     <!doctype html>
     <html lang="en">
@@ -16,7 +16,7 @@ function generateHeader($css = array(), $title = 'CASA San Miguel | PEACE Progra
             <?php
             foreach ($css as $stylesheet) {
                 ?>
-                <link rel = "stylesheet" href = "<?php echo stylesheet; ?>">
+                <link rel = "stylesheet" href = "public/stylesheets/<?php echo $stylesheet; ?>.css">
                 <?php
             }
             ?>

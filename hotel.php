@@ -1,27 +1,21 @@
 <?php include 'views/templates.php'; 
 
- generateHeader();
+ generateHeader('Hotel', array('type', 'hotel'));
 
 ?>
       <!-- navigation ends here -->
       <!-- start different pages of my parallax thing -->
-      <div id="edu-banner" class="parallax-1 screen-1 banner" data-stellar-background-ratio="0.3">
+      <div id="hotel-banner" class="parallax-1 screen-1 banner" data-stellar-background-ratio="0.3">
         <div class="container">
-          <h1>Hotel</h1>
+          <h1 class="title">Marketing Slogan.</h1>
         </div>
       </div>
       <div id="edu-content" class="content screen-2 parallax-2">
         <div class="container">
-          <h1>Peace Program</h1>
-          <div class="col-md-6">
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          <h1>Bed and Breakfast</h1>
+          <div class="col-md-12">
+            <p class="lead">Designed for both business and leisure travel, Casa San Miguel Bed and Breakfast is ideally situated in Pundaquit - San Antonio; one of the city's most popular locales. From here, guests can enjoy easy access to all that the lively city has to offer. With its convenient location, the hotel offers easy access to the city's must-see destinations.
             </p>
-          </div>
-          <div class="col-md-6">
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>  
           </div>
         </div>
       </div>

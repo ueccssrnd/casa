@@ -113,7 +113,6 @@ div[class*='screen-'] > .container div[class*='col-md'] > h1.title {
 }
 div[class*='screen-'] > .container div[class*='col-md'] > p {
   color: #888;
-  font: 1em Helvetica Neue;
   text-align: justify;
   text-indent: 80px;
 }
@@ -151,6 +150,7 @@ div[class*='screen-']:nth-last-child(2) {
 #edu-banner {
   background-image: url("../images/education.jpg");
 }
+
 #edu-register {
   background-image: url("../images/banner.jpg");
 }
