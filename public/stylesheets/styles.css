@@ -114,7 +114,6 @@ div[class*='screen-'] > .container div[class*='col-md'] > h1.title {
 div[class*='screen-'] > .container div[class*='col-md'] > p {
   color: #888;
   text-align: justify;
-  text-indent: 80px;
 }
 div[class*='screen-'] > .container div[class*='col-md'] > p > h1 {
   border-bottom: 1px solid #dfdfdf;
