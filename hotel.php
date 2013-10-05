@@ -33,7 +33,7 @@
       <div id="edu-register" class="parallax-4 screen-4 forms">
         <div class="container">
           <div class="col-md-6">
-            <h1>Register</h1>
+            <h1 class="title">Register</h1>
             <form action="mail.php" role="form">
               <fieldset disabled>
                 <div class="form-group">
