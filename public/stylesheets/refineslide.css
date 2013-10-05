@@ -157,3 +157,37 @@
 	.rs-caption { opacity: 0!important; }
 }
 */
+
+.rs-slider{
+    margin-bottom: 7px;
+}
+
+.rs-caption{
+    background-color: rgba(0,0,0, 0.4);
+    color: #CCC;
+    overflow-y: hidden !important;
+}
+
+.rs-caption h3{
+    font-size: 3em;
+}
+
+.rs-caption p{
+    font-size: 1.5em;
+}
+
+.rs-caption h3, .rs-caption p{
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 1);
+    margin: 15px 30px;
+} 
+
+.rs-wrap{
+    margin: 0 auto;
+    opacity: 1;
+}
+
+
+.rs-slider{
+    padding-left: 0;
+
+}

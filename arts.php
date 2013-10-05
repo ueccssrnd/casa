@@ -1,20 +1,24 @@
 <?php
 include 'views/templates.php';
 
-generateHeader('Museum', array('type', 'museum', 'refineslide'));
+generateHeader('Music', array('type', 'arts', 'refineslide'));
 ?>
 <!-- navigation ends here -->
 <!-- start different pages of my parallax thing -->
-<div id="museum-banner" class="parallax-1 screen-1 banner" data-stellar-background-ratio="0.3">
+<div id="arts-banner" class="parallax-1 screen-1 banner" data-stellar-background-ratio="0.3">
     <div class="container">
-        <h1 class="title">You are a piece of me.</h1>
+        <h1 class="title">Playing It Forward.</h1>
     </div>
 </div>
 <div id="edu-content" class="content screen-2 parallax-2">
     <div class="container">
-        <h1>The Casa San Miguel Museum</h1>
+        <h1>Arts Education</h1>
         <div class="col-md-12">
-            <p class="lead">The Museum of Community Heritage is a unique experience that focuses on the rich local heritage of San Antonio as a town and San Miguel as a barrio. Visitors will be presented with a view of history from the perspective of a provincial town and barrio, from its founding to present day, relate it to Philippine history and World events as well as highlight the rich natural heritage. Visitors will see actual artifacts as well as visual representations of events and stories. 
+            <p class="lead">A child who is able to draw is able to draw their 
+                future. Casa San Miguel provides weekend workshops for over 100 
+                local children in the Performing Arts, Visual Arts and Writing. 
+                The Pundaquit Peace Virtuosi will server as Peace Ambassadors 
+                through community and outreach programs.
             </p>
         </div>
         <div class="col-md-12 photo-gallery">

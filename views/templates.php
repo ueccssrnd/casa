@@ -38,7 +38,7 @@ function generateHeader($title = 'CASA San Miguel | PEACE Program', $css = array
                                 <li><a href="index.php">Home</a></li>
                                 <li><a href="hotel.php">Hotel</a></li>
                                 <li><a href="museum.php">Museum</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="arts.php">Arts</a></li>
                                 <li><a href="#">Investor</a></li>
                             </ul>
                         </div>

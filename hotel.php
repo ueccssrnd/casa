@@ -1,7 +1,7 @@
 <?php
 include 'views/templates.php';
 
-generateHeader('Hotel', array('type', 'hotel'));
+generateHeader('Hotel', array('type', 'hotel', 'refineslide'));
 ?>
 <!-- navigation ends here -->
 <!-- start different pages of my parallax thing -->
@@ -17,18 +17,39 @@ generateHeader('Hotel', array('type', 'hotel'));
             <p class="lead">Designed for both business and leisure travel, Casa San Miguel Bed and Breakfast is ideally situated in Pundaquit - San Antonio; one of the city's most popular locales. From here, guests can enjoy easy access to all that the lively city has to offer. With its convenient location, the hotel offers easy access to the city's must-see destinations.
             </p>
         </div>
-        <div class="col-md-12">
-            <ul class="unstyled">
-                <li>5 beautifully appointed guest rooms</li>
-                <li>each including non smoking rooms, fan, air conditioning, internet access – LAN (complimentary), shower. </li>
-                <li>The hotel offers many unique recreational opportunities such as garden. When you are looking for comfortable and convenient accommodations in Subic (Zambales), make Casa San Miguel Bed and Breakfast your home away from home.</li>
+        <div class="col-md-12 photo-gallery">
+            <ul class="rs-slider">
+                <li><img src="public/images/casa-house.jpg" alt="Historical Photographs"/>
+                    <div class="rs-caption rs-bottom">
+                        <h3>5 Beautifully Appointed Guest Rooms</h3>
+                        <p>Historical photographs (1905) of Aetas by American researcher William Allen Reed as well as videos and artifacts reflecting the rich Aeta heritage.</p>
+                    </div>
+                </li>
+                <li><img src="public/images/banner-museum.jpg" alt=""/>
+                    <div class="rs-caption rs-bottom">
+                        <h3>Amenities</h3>
+                        <p>These include fans, air conditioning, complimentary Internet access – LAN, and a shower. </p>
+                    </div>
+                </li>
+                <li><img src="public/images/casa-food.jpg" alt=""/>
+                    <div class="rs-caption rs-bottom">
+                        <h3>That Beach Dinner</h3>
+                        <p>Copy about eating food sa beach.</p>
+                    </div>
+                </li>
+                <li><img src="public/images/casa-beach-dinner.jpg" alt=""/>
+                    <div class="rs-caption rs-bottom">
+                        <h3>Beach Dinner</h3>
+                        <p>The hotel offers many unique recreational opportunities such as garden. When you are looking for comfortable and convenient accommodations in Subic (Zambales), make Casa San Miguel Bed and Breakfast your home away from home.</p>
+                    </div>
+                </li>
             </ul>
         </div>
         <div class="col-md-6">
             <h2>Rates</h2>
             <table class="table">
                 <thead>
-                    <tr class="btn-primary">
+                    <tr>
                         <td>Room Type</td>
                         <td>Peak</td>
                         <td>Off-Peak</td>
@@ -63,32 +84,6 @@ generateHeader('Hotel', array('type', 'hotel'));
         </div>
     </div>
 </div>
-<div id="edu-register" class="parallax-4 screen-4 forms">
-    <div class="container">
-        <div class="col-md-6">
-            <h1 class="title">Inquiry</h1>
-            <form action="mail.php" role="form">
-                <fieldset disabled>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" value="Register for Education" class="form-control">
-                    </div>
-                </fieldset>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                    <label for="message">Short Message</label>
-                    <textarea class="form-control" id="message"></textarea>
-                </div>
-                <!-- <button type="submit" class="btn btn-default btn-social facebook"><i class="icon-facebook"></i>Register via Facebook</button> -->
-                <button type="submit" class="btn btn-default btn-large btn-casa"><i class="icon-envelope"></i>Submit</button>
-            </form>
-        </div>
-        <!-- <div class="overlay"></div> -->
-    </div>
-</div>
 <div class="footer">
     <div class="container">
         <p>CASA San Miguel, Evagelista Street, Barangay San Miguel, San Antonio, Zambales, 2206 Philippines </p>
@@ -99,4 +94,4 @@ generateHeader('Hotel', array('type', 'hotel'));
 </div>
 </div>
 
-<?php generateFooter(); ?>
+<?php generateFooter(array('jquery.refineslide.min', 'slider')); ?>
