@@ -89,7 +89,17 @@ div[class*='screen-']
     font-weight 500
     margin 40px 0 40px 0
     text-align center
-  > .container div[class*='col-md']> p
+    &.title
+      color #fff
+      text-shadow 0 2px 5px rgba(0,0,0,0.3)
+      text-align left
+  > .container div[class*='col-md'] > h1.title
+      color #fff
+      font 7em Helvetica Neue
+      font-weight 500
+      text-shadow 0 2px 5px rgba(0,0,0,0.3)
+      text-align left
+  > .container div[class*='col-md'] > p
     color #888
     font 1em Helvetica Neue
     text-align justify
@@ -122,19 +132,8 @@ div[class*='screen-']
 // page specifics
 #edu-banner
   background-image url('../images/education.jpg')
-  h1
-    color #fff
-    text-shadow 0 2px 5px rgba(0,0,0,0.3)
-    text-align left
 #edu-register
   background-image url('../images/banner.jpg')
-  h1
-    border 0
-    font 7em Helvetica Neue
-    font-weight 500
-    color #fff
-    text-shadow 0 2px 5px rgba(0,0,0,0.3)
-    text-align left
   .overlay
     background: rgba(255,255,255,0.8) !important;
   form .btn-large

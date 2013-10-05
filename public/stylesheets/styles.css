@@ -99,13 +99,25 @@ div[class*='screen-'] > .container > h1 {
   margin: 40px 0 40px 0;
   text-align: center;
 }
-div[class*='screen-'] > .container div[class*='col-md']> p {
+div[class*='screen-'] > .container > h1.title {
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  text-align: left;
+}
+div[class*='screen-'] > .container div[class*='col-md'] > h1.title {
+  color: #fff;
+  font: 7em Helvetica Neue;
+  font-weight: 500;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  text-align: left;
+}
+div[class*='screen-'] > .container div[class*='col-md'] > p {
   color: #888;
   font: 1em Helvetica Neue;
   text-align: justify;
   text-indent: 80px;
 }
-div[class*='screen-'] > .container div[class*='col-md']> p > h1 {
+div[class*='screen-'] > .container div[class*='col-md'] > p > h1 {
   border-bottom: 1px solid #dfdfdf;
   font: 3em BebasNeue;
   font-weight: 500;
@@ -139,21 +151,8 @@ div[class*='screen-']:nth-last-child(2) {
 #edu-banner {
   background-image: url("../images/education.jpg");
 }
-#edu-banner h1 {
-  color: #fff;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  text-align: left;
-}
 #edu-register {
   background-image: url("../images/banner.jpg");
-}
-#edu-register h1 {
-  border: 0;
-  font: 7em Helvetica Neue;
-  font-weight: 500;
-  color: #fff;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  text-align: left;
 }
 #edu-register .overlay {
   background: rgba(255,255,255,0.8) !important;

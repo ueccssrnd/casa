@@ -7,7 +7,7 @@
       <!-- start different pages of my parallax thing -->
       <div id="edu-banner" class="parallax-1 screen-1 banner" data-stellar-background-ratio="0.3">
         <div class="container">
-          <h1>Education</h1>
+          <h1 class="title">Education</h1>
         </div>
       </div>
       <div id="edu-content" class="content screen-2 parallax-2">
@@ -33,7 +33,7 @@
       <div id="edu-register" class="parallax-4 screen-4 forms">
         <div class="container">
           <div class="col-md-6">
-            <h1>Register</h1>
+            <h1 class="title">Register</h1>
             <form action="mail.php" role="form">
               <fieldset disabled>
                 <div class="form-group">
