@@ -1,7 +1,7 @@
 <?php
 include 'views/templates.php';
 
-generateHeader('Museum', array('type', 'museum', 'refineslide'));
+generateHeader('Museum', array('type', 'refineslide'));
 ?>
 <!-- navigation ends here -->
 <!-- start different pages of my parallax thing -->
@@ -99,14 +99,10 @@ generateHeader('Museum', array('type', 'museum', 'refineslide'));
     </div>
 </div>
 
-<div class="footer">
-    <div class="container">
-        <p>CASA San Miguel, Evagelista Street, Barangay San Miguel, San Antonio, Zambales, 2206 Philippines </p>
-    </div>
+<?php generateFooter(); ?>
 
-</div>
 <!-- end different pages of my parallax thing -->
 </div>
 </div>
 
-<?php generateFooter(array('jquery.refineslide.min', 'slider')); ?>
+<?php generateJS(array('jquery.refineslide.min', 'slider')); ?>

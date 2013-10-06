@@ -1,13 +1,13 @@
 <?php
 include 'views/templates.php';
 
-generateHeader('Hotel', array('type', 'hotel', 'refineslide'));
+generateHeader('Hotel', array('type', 'refineslide'));
 ?>
 <!-- navigation ends here -->
 <!-- start different pages of my parallax thing -->
 <div id="hotel-banner" class="parallax-1 screen-1 banner" data-stellar-background-ratio="0.3">
     <div class="container">
-        <h1 class="title">Why are you my clarity?</h1>
+        <h1 class="title">Experience art and mangoes by the sea...</h1>
     </div>
 </div>
 <div id="edu-content" class="content screen-2 parallax-2">
@@ -72,7 +72,6 @@ generateHeader('Hotel', array('type', 'hotel', 'refineslide'));
                         <td>P100.00</td>
                     </tr>
                 </tbody>
-
             </table>
         </div>
         <div class="col-md-6">
@@ -84,14 +83,9 @@ generateHeader('Hotel', array('type', 'hotel', 'refineslide'));
         </div>
     </div>
 </div>
-<div class="footer">
-    <div class="container">
-        <p>CASA San Miguel, Evagelista Street, Barangay San Miguel, San Antonio, Zambales, 2206 Philippines </p>
-    </div>
-
-</div>
+<?php generateFooter(); ?>
 <!-- end different pages of my parallax thing -->
 </div>
 </div>
 
-<?php generateFooter(array('jquery.refineslide.min', 'slider')); ?>
+<?php generateJS(array('jquery.refineslide.min', 'slider')); ?>

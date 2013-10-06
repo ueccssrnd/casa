@@ -11,3 +11,35 @@ thead tr{
     padding-left: 0;
     padding-right: 0;
 }
+
+.faces{
+   margin-bottom: 1em;
+}
+
+#hotel-banner{
+    background-image: url("../images/banner-bed-and-breakfast.jpg");
+}
+
+#museum-banner{
+    background-image: url("../images/banner-museum.jpg");
+}
+
+#investor-banner{
+    background-image: url("../images/banner-investor.jpg");
+    background-position: top center;
+}
+
+#arts-banner{
+    background-image: url("../images/banner-arts.jpg");
+    background-position: top center;
+}
+
+#kapihan-banner{
+    background-image: url("../images/banner-kapihan.jpg");
+    background-position: top center;
+}
+
+#educ-banner{
+    background-image: url("../images/banner-educ.jpg");
+    background-position: top center;
+}
