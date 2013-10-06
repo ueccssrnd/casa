@@ -8,6 +8,13 @@ $.stellar.positionProperty.apple =
       $el.css('left', newLeft);
         
 
+$('body').niceScroll(
+    cursorborder: "0"
+    cursorcolor:"#000"
+    zindex: 1
+    horizrailenabled:false
+    cursorwidth: 15
+  )
 
 $('.branding').find('.slide').list_ticker()
 $("#navigation").sticky({topSpacing: 0})
@@ -26,6 +33,16 @@ $('#navigation').find('a').on 'click', (e)->
 $('#mobile-nav').on('click', (e) ->
     $(@).find('ul').toggleClass('show-nav');
   )
+
+$('.scrolldown').on('click', ()->
+    that = $(@)
+    if (next == undefined)
+      next = $('.parallax').next()
+    else
+      next = next.next()
+    $('html, body').animate({scrollTop: next.offsetHeight});
+  )
+
 
 $.stellar
   horizontalScrolling: false

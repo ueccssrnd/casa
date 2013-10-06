@@ -1,0 +1,11 @@
+p.lead{
+    text-indent: 80px;
+}
+
+thead tr{
+    font-weight: bold;
+}
+
+.photo-gallery{
+    margin-bottom: 3em;
+}
