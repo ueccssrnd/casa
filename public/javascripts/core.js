@@ -2,6 +2,23 @@
 (function() {
   var $root;
 
+  $.stellar.positionProperty.apple = {
+    setTop: function($el, newTop, originalTop) {
+      var _ref;
+      $el.css({
+        'top': newTop,
+        'left': (_ref = $el.hasClass('hand')) != null ? _ref : originalTop - {
+          newTop: 0
+        }
+      });
+      return {
+        setLeft: function($el, newLeft, originalLeft) {
+          return $el.css('left', newLeft);
+        }
+      };
+    }
+  };
+
   $('.branding').find('.slide').list_ticker();
 
   $("#navigation").sticky({
@@ -21,10 +38,14 @@
     return false;
   });
 
+  $('#mobile-nav').on('click', function(e) {
+    return $(this).find('ul').toggleClass('show-nav');
+  });
+
   $.stellar({
     horizontalScrolling: false,
-    verticalOffset: -300,
-    horizontalOffset: 0
+    horizontalOffset: 0,
+    hideDistantElements: false
   });
 
 }).call(this);

@@ -1,6 +1,16 @@
+$.stellar.positionProperty.apple =
+  setTop: ($el, newTop, originalTop) ->
+    $el.css(
+      'top': newTop
+      'left': $el.hasClass('hand') ? originalTop - newTop : 0
+    )
+    setLeft: ($el, newLeft, originalLeft) ->
+      $el.css('left', newLeft);
+        
+
 
 $('.branding').find('.slide').list_ticker()
-$("#navigation").sticky({topSpacing:0})
+$("#navigation").sticky({topSpacing: 0})
 
 $root = $('html, body');
 $('#navigation').find('a').on 'click', (e)->
@@ -13,7 +23,11 @@ $('#navigation').find('a').on 'click', (e)->
   )
   return false
 
+$('#mobile-nav').on('click', (e) ->
+    $(@).find('ul').toggleClass('show-nav');
+  )
+
 $.stellar
   horizontalScrolling: false
-  verticalOffset: -300
   horizontalOffset: 0
+  hideDistantElements: false

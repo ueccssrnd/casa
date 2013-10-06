@@ -5,6 +5,13 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Chalk';
+  src: url("../fonts/chalkduster-webfont.eot");
+  src: url("../fonts/chalkduster-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/chalkduster-webfont.woff") format('woff'), url("../fonts/chalkduster-webfont.ttf") format('truetype'), url("../fonts/chalkduster-webfont.svg#BebasNeueRegular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   z-index: 1;
 }
@@ -19,8 +26,14 @@ body {
   background: #fff;
   overflow-x: hidden;
 }
+#wrapper {
+  height: 100%;
+}
+#scroller {
+  height: 100%;
+}
 #navigation {
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.9);
   box-shadow: 0px 4px 15px rgba(0,0,0,0.07);
   height: 80px;
   -webkit-transition: all 0.3s;
@@ -78,25 +91,37 @@ body {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-#primary-nav > li ahover {
+#primary-nav > li a:hover {
   color: #ffd600;
   text-decoration: none;
+}
+#mobile-nav {
+  display: none;
+  position: relative;
+}
+#scroller.landing div[class*='screen-'] h1 {
+  text-shadow: 0px 10px 10px rgba(0,0,0,0.4);
+}
+#scroller.landing div[class*='screen-'] p {
+  color: #ededed;
+  font-size: 1.5em;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 div[class*='screen-'] {
   background-color: #fff;
   background-size: cover;
-  background-position: center center;
+  background-position: bottom center;
   background-repeat: no-repeat;
   height: 100%;
-  margin: 0 0 40px 0;
   position: relative;
   width: 100%;
+  z-index: 0;
 }
 div[class*='screen-'] > .container > h1 {
   border-bottom: 1px solid #dfdfdf;
   font: 5em Helvetica Neue;
   font-weight: 500;
-  margin: 40px 0 40px 0;
+  margin: 20px 0 20px 0;
   text-align: center;
 }
 div[class*='screen-'] > .container > h1.title {
@@ -104,7 +129,13 @@ div[class*='screen-'] > .container > h1.title {
   text-shadow: 0 2px 5px rgba(0,0,0,0.3);
   text-align: left;
 }
+div[class*='screen-'] > .container div[class*='col-md'] .vector {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
 div[class*='screen-'] > .container div[class*='col-md'] > h1.title {
+  display: inline-block;
   color: #fff;
   font: 7em Helvetica Neue;
   font-weight: 500;
@@ -113,7 +144,7 @@ div[class*='screen-'] > .container div[class*='col-md'] > h1.title {
 }
 div[class*='screen-'] > .container div[class*='col-md'] > p {
   color: #888;
-  font: 1em Helvetica Neue;
+  font: 1.4em Cambria;
   text-align: justify;
   text-indent: 80px;
 }
@@ -122,10 +153,26 @@ div[class*='screen-'] > .container div[class*='col-md'] > p > h1 {
   font: 3em BebasNeue;
   font-weight: 500;
 }
+div[class*='screen-'] > .container div[class*='col-md'] > p .btn-large {
+  min-width: 200px;
+  min-width: auto;
+  height: 60px;
+  font: 1em Helvetica Neue;
+  float: right;
+  font-weight: 500;
+}
+div[class*='screen-'] > .container div[class*='col-md'] > p.dark {
+  color: #392212 !important;
+  text-shadow: none !important;
+  font-weight: 500;
+}
+div[class*='screen-'] > .container div[class*='col-md'] > p.lead {
+  font-style: italic;
+}
 div[class*='screen-'].banner {
   background-size: cover;
   background-position: center center;
-  height: 300px !important;
+  height: 300px;
 }
 div[class*='screen-'].banner .container > h1 {
   border: 0;
@@ -148,20 +195,6 @@ div[class*='screen-']:nth-last-child(2) {
   padding-bottom: 80px;
   margin-bottom: 0;
 }
-#edu-banner {
-  background-image: url("../images/education.jpg");
-}
-#edu-register {
-  background-image: url("../images/banner.jpg");
-}
-#edu-register .overlay {
-  background: rgba(255,255,255,0.8) !important;
-}
-#edu-register form .btn-large {
-  width: 100%;
-  height: 60px;
-  font: 2em BebasNeue;
-}
 .footer {
   background: #333;
   border-top: 1px solid #000;
@@ -181,11 +214,6 @@ div[class*='screen-']:nth-last-child(2) {
   word-wrap: break-word;
   margin-bottom: 0;
 }
-@media all and (max-width: 650px) {
-  .footer > p {
-    content: 'CASA San Miguel' !important;
-  }
-}
 .overlay {
   background: rgba(255,214,0,0.8);
   bottom: 0;
@@ -199,7 +227,7 @@ div[class*='screen-']:nth-last-child(2) {
 .btn-casa {
   background: #ebd72d;
   border: 1px solid #e5d01a;
-  color: #333;
+  color: #000;
   margin-top: 10px;
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
@@ -213,4 +241,92 @@ div[class*='screen-']:nth-last-child(2) {
 }
 .btn-casa > i[class*='icon-'] {
   margin: 0 5px;
+}
+.btn-casa.dark {
+  background: #392212;
+  color: #ccc;
+  border: 0;
+}
+.btn-casa.dark:hover {
+  background: #37261a;
+  color: #fff;
+}
+#edu-banner {
+  background-image: url("../images/education.jpg");
+}
+#edu-register {
+  background-image: url("../images/banner.jpg");
+}
+#edu-register .overlay {
+  background: rgba(255,255,255,0.8) !important;
+}
+#edu-register form .btn-large {
+  width: 100%;
+  height: 60px;
+  font: 2em BebasNeue;
+}
+#home {
+  background-image: url("../images/home-bg.jpg");
+  height: 100%;
+  overflow: hidden;
+}
+#home .overlay {
+  background: rgba(0,0,0,0.8);
+}
+#peace {
+  background-color: #ededed;
+  overflow: hidden;
+}
+#peace > .container div[class*='col-md'] > h1.title {
+  border: 0;
+  display: block;
+  color: #162b0e;
+  font: 7em Chalk;
+  line-height: 300px;
+  text-align: center;
+  text-shadow: none;
+}
+#peace .vector {
+  position: absolute;
+  right: 0;
+  height: 120%;
+  top: 80%;
+}
+#peace .overlay {
+  background: rgba(255,255,255,0.7);
+}
+#kapihan {
+  background-image: url("../images/kapihan-bg.jpg");
+  overflow: hidden;
+}
+#kapihan .overlay {
+  background: rgba(22,43,14,0.8);
+}
+#kapihan .hand {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
+  height: 80%;
+  position: absolute;
+  top: 0;
+  left: -20%;
+  z-index: 999;
+}
+#arts {
+  background-image: url("../images/museum.jpg");
+  overflow: hidden;
+}
+#education {
+  background-image: url("../images/education-bg.jpg");
+  overflow: hidden;
+}
+#education .hand {
+  height: 80%;
+  position: absolute;
+  top: 0;
+  right: -10%;
+  z-index: 999;
+}
+#education .overlay {
+  background: rgba(71,31,19,0.8);
 }
