@@ -8,4 +8,6 @@ thead tr{
 
 .photo-gallery{
     margin-bottom: 3em;
+    padding-left: 0;
+    padding-right: 0;
 }
