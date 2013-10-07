@@ -36,10 +36,11 @@ function generateHeader($title = 'CASA San Miguel | PEACE Program', $css = array
                             </section>
                             <ul id="primary-nav" class="col-md-8">
                                 <li><a href="index.php">Home</a></li>
+                                <li><a href="arts.php">Arts</a></li>
                                 <li><a href="hotel.php">Hotel</a></li>
                                 <li><a href="museum.php">Museum</a></li>
-                                <li><a href="arts.php">Arts</a></li>
-                                <li><a href="#">Investor</a></li>
+                                <li><a href="cafe.php">Cafe</a></li>
+                                <li><a href="investor.php">Help</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -47,7 +48,18 @@ function generateHeader($title = 'CASA San Miguel | PEACE Program', $css = array
                     <?php
                 }
 
-                function generateFooter($js = array()) {
+                function generateFooter() {
+                    ?>
+                    <div class="footer">
+                        <div class="container">
+                            <p>CASA San Miguel, Evangelista Street, Barangay San Miguel, San Antonio, Zambales, 2206 Philippines </p>
+                        </div>
+                    </div>
+
+                    <?php
+                }
+
+                function generateJS($js = array()) {
                     ?>
                     <script src = "public/vendor/jquery/jquery.min.js"></script>
                     <script src = "public/vendor/jquery/jquery.nicescroll.js"></script>
