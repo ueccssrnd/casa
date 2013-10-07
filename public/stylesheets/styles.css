@@ -149,6 +149,10 @@ div[class*='screen-'] > .container div[class*='col-md'] > h1.title {
   text-shadow: 0 2px 5px rgba(0,0,0,0.3);
   text-align: left;
 }
+div[class*='screen-'] > .container div[class*='col-md'] > h1.title.medium {
+  font-size: 5em;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.3) !important;
+}
 div[class*='screen-'] > .container div[class*='col-md'] > p {
   color: #888;
   font: 1em Helvetica Neue;
@@ -175,7 +179,7 @@ div[class*='screen-'] > .container div[class*='col-md'] > p.dark {
   font-weight: 500;
 }
 div[class*='screen-'] > .container div[class*='col-md'] > p.lead {
-  font-style: italic;
+  font-size: 2.4em !important;
 }
 div[class*='screen-'].banner {
   background-size: cover;
@@ -186,6 +190,9 @@ div[class*='screen-'].banner .container > h1 {
   border: 0;
   font: 7em Helvetica Neue;
   font-weight: 500;
+}
+div[class*='screen-'].banner.medium {
+  height: 500px;
 }
 div[class*='screen-'].forms label {
   font: 2em BebasNeue;
@@ -324,6 +331,10 @@ div[class*='screen-']:nth-last-child(2) {
   background-image: url("../images/museum.jpg");
   overflow: hidden;
 }
+#contact {
+  background-image: url("../images/casa-house.jpg");
+  overflow: hidden;
+}
 #education {
   background-image: url("../images/education-bg.jpg");
   overflow: hidden;
@@ -336,6 +347,20 @@ div[class*='screen-']:nth-last-child(2) {
   z-index: 999;
 }
 #education .overlay {
+  background: rgba(71,31,19,0.8);
+}
+#enterprise {
+  background-image: url("../images/enterprise-bg.jpg");
+  overflow: hidden;
+}
+#enterprise .overlay {
+  background-color: rgba(51,103,51,0.8);
+}
+#ensemble {
+  background-image: url("../images/ensemble-bg.jpg");
+  overflow: hidden;
+}
+#ensemble .overlay {
   background: rgba(71,31,19,0.8);
 }
 #community {
@@ -361,6 +386,56 @@ div[class*='screen-']:nth-last-child(2) {
   top: 0;
   height: 100%;
 }
+#support {
+  background-image: url("../images/home-bg.jpg");
+  height: 100%;
+  overflow: hidden;
+}
+#support .overlay {
+  background: rgba(0,0,0,0.8);
+}
+#support .vector {
+  display: inline-block;
+  top: 50%;
+}
+#hotel {
+  background-image: url("../images/hotel-bg.jpg");
+  height: 100%;
+  overflow: hidden;
+}
+#hotel .overlay {
+  background: rgba(193,77,0,0.8);
+}
+#museum {
+  background-image: url("../images/museum.jpg");
+  height: 100%;
+  overflow: hidden;
+}
+#museum .overlay {
+  background: rgba(43,73,58,0.8);
+}
+#resto {
+  background-image: url("../images/casa-food.jpg");
+  height: 100%;
+  overflow: hidden;
+}
+#resto .overlay {
+  background: rgba(255,203,79,0.8);
+}
+#sponsors h1 {
+  color: #222;
+  font-size: 7em;
+  text-align: center;
+  text-shadow: none !important;
+  padding-top: 20px;
+  line-height: 1em;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+}
+#sponsors > .container {
+  text-align: center;
+}
 @media screen and (max-width: 960px) {
   #community-content h1 {
     font-size: 4em;
@@ -385,10 +460,25 @@ button.scrolldown {
   -o-transition: 0.1s;
   transition: 0.1s;
 }
+button.scrolldown.dark {
+  background-image: url("../images/down-dark.png");
+}
 button.scrolldown:hover {
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
+}
+.lead.green {
+  color: #cfc !important;
+}
+.lead.orange {
+  color: #fc9 !important;
+}
+.lead.black {
+  color: #999 !important;
+}
+.lead.yellow {
+  color: #392212 !important;
 }

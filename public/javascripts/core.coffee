@@ -8,12 +8,25 @@ $.stellar.positionProperty.apple =
       $el.css('left', newLeft);
         
 
+$('#navigation').find('a').on 'click', (e)->
+  href = $.attr(this, 'href')
+  $root.animate(
+    {scrollTop: $(href).offset().top - 80}
+    500
+    , () ->
+      window.location.hash = href
+  )
+  return false
+
 $('body').niceScroll(
     cursorborder: "0"
-    cursorcolor:"#000"
+    cursorcolor:"#fff"
     zindex: 1
     horizrailenabled:false
     cursorwidth: 15
+    borderradius: 0
+    cursortrail: '#ccc'
+    zindex: 999999
   )
 
 $('.branding').find('.slide').list_ticker()

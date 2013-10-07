@@ -18,7 +18,6 @@
   font-weight normal
   font-style normal
 
-
 *
   z-index 1
 
@@ -139,6 +138,9 @@ div[class*='screen-']
       font-weight 500
       text-shadow 0 2px 5px rgba(0,0,0,0.3)
       text-align left
+      &.medium
+        font-size 5em
+        text-shadow 0 2px 5px rgba(0,0,0,0.3) !important
   > .container div[class*='col-md'] > p
     color #888
     font 1em Helvetica Neue 
@@ -162,7 +164,7 @@ div[class*='screen-']
       text-shadow none !important
       font-weight 500
     &.lead
-      font-style italic
+      font-size 2.4em !important
   &.banner
     background-size cover
     background-position center center
@@ -171,6 +173,8 @@ div[class*='screen-']
       border 0
       font 7em Helvetica Neue
       font-weight 500
+    &.medium
+      height 500px
   &.forms label
     font 2em BebasNeue
     color #fff
@@ -287,6 +291,9 @@ div[class*='screen-']
 #arts
   background-image url('../images/museum.jpg')
   overflow hidden
+#contact
+  background-image url('../images/casa-house.jpg')
+  overflow hidden
 #education
   background-image url('../images/education-bg.jpg')
   overflow hidden
@@ -296,6 +303,16 @@ div[class*='screen-']
     top 0
     right -10%
     z-index 999
+  .overlay
+    background rgba(71, 31, 19, 0.8)
+#enterprise
+  background-image url('../images/enterprise-bg.jpg')
+  overflow hidden
+  .overlay
+    background-color rgba(51,103,51,0.8)
+#ensemble
+  background-image url('../images/ensemble-bg.jpg')
+  overflow hidden
   .overlay
     background rgba(71, 31, 19, 0.8)
 #community
@@ -317,6 +334,47 @@ div[class*='screen-']
     right 0
     top 0
     height 100%
+#support
+  background-image url('../images/home-bg.jpg')
+  height 100%
+  overflow hidden
+  .overlay
+    background rgba(0, 0, 0, 0.8)
+  .vector
+    display inline-block
+    top 50%
+#hotel
+  background-image url('../images/hotel-bg.jpg')
+  height 100%
+  overflow hidden
+  .overlay
+    background rgba(193,77,0,0.8)
+#museum
+  background-image url('../images/museum.jpg')
+  height 100%
+  overflow hidden
+  .overlay
+    background rgba(43,73,58,0.8)
+#resto
+  background-image url('../images/casa-food.jpg')
+  height 100%
+  overflow hidden
+  .overlay
+    background rgba(255,203,79,0.8)
+#sponsors
+  // background-color rgba(22,43,14, 1)
+  h1 
+    color #222
+    font-size 7em
+    text-align center
+    text-shadow none !important
+    padding-top 20px
+    line-height 1em
+    height 100%
+    text-align center
+    width 100%
+  > .container
+    text-align center
 @media screen and (max-width: 960px)
   #community-content h1
     font-size 4em
@@ -338,9 +396,20 @@ button.scrolldown
   -ms-transition 0.1s
   -o-transition 0.1s
   transition 0.1s
+  &.dark
+    background-image url('../images/down-dark.png')
   &:hover
     -webkit-transform scale(1.1)
     -moz-transform scale(1.1)
     -o-transform scale(1.1)
     -ms-transform scale(1.1)
     transform scale(1.1)
+
+.lead.green
+  color #ccffcc !important
+.lead.orange
+  color #ffcc99 !important
+.lead.black
+  color #999 !important
+.lead.yellow
+  color #392212 !important

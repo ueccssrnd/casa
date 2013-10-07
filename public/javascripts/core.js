@@ -21,10 +21,13 @@
 
   $('body').niceScroll({
     cursorborder: "0",
-    cursorcolor: "#000",
+    cursorcolor: "#fff",
     zindex: 1,
     horizrailenabled: false,
-    cursorwidth: 15
+    cursorwidth: 15,
+    borderradius: 0,
+    cursortrail: '#ccc',
+    zindex: 999999
   });
 
   $('.branding').find('.slide').list_ticker();
