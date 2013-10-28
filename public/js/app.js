@@ -17,11 +17,6 @@ Casa = (function() {
 
   Casa.prototype.ui = {
     build: function() {
-      $('body').queryLoader2({
-        percentage: true,
-        backgroundColor: '#fff',
-        barColor: '#bbb'
-      });
       return this.sticky();
     },
     sticky: function() {

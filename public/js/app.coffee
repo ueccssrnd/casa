@@ -11,7 +11,6 @@ class Casa
 
   ui: {
     build: () ->
-      $('body').queryLoader2({percentage:true, backgroundColor: '#fff', barColor: '#bbb'})
       this.sticky()
     sticky: () ->
       $('#navigation').sticky({
