@@ -1,112 +1,15 @@
-// Sticky Plugin
-// =============
-// Author: Anthony Garand
-// Improvements by German M. Bravo (Kronuz) and Ruud Kamphuis (ruudk)
-// Improvements by Leonardo C. Daronco (daronco)
-// Created: 2/14/2011
-// Date: 2/12/2012
-// Website: http://labs.anthonygarand.com/sticky
-// Description: Makes an element on the page stick on the screen as you scroll
-//              It will only set the 'top' and 'position' of your element, you
-//              might need to adjust the width in some cases.
-
-(function($) {
-    var defaults = {
-            topSpacing: 0,
-            bottomSpacing: 0,
-            className: 'is-sticky',
-            wrapperClassName: 'sticky-wrapper'
-        },
-        $window = $(window),
-        $document = $(document),
-        sticked = [],
-        windowHeight = $window.height(),
-        scroller = function() {
-            var scrollTop = $window.scrollTop(),
-                documentHeight = $document.height(),
-                dwh = documentHeight - windowHeight,
-                extra = (scrollTop > dwh) ? dwh - scrollTop : 0;
-            for (var i = 0; i < sticked.length; i++) {
-                var s = sticked[i],
-                    elementTop = s.stickyWrapper.offset().top,
-                    etse = elementTop - s.topSpacing - extra;
-                if (scrollTop <= etse) {
-                    if (s.currentTop !== null) {
-                        s.stickyElement
-                            .css('position', '')
-                            .css('top', '')
-                            .removeClass(s.className);
-                        s.stickyElement.parent().removeClass(s.className);
-                        s.currentTop = null;
-                    }
-                }
-                else {
-                    var newTop = documentHeight - s.stickyElement.outerHeight()
-                        - s.topSpacing - s.bottomSpacing - scrollTop - extra;
-                    if (newTop < 0) {
-                        newTop = newTop + s.topSpacing;
-                    } else {
-                        newTop = s.topSpacing;
-                    }
-                    if (s.currentTop != newTop) {
-                        s.stickyElement
-                            .css('position', 'fixed')
-                            .css('top', newTop)
-                            .addClass(s.className);
-                        s.stickyElement.parent().addClass(s.className);
-                        s.currentTop = newTop;
-                    }
-                }
-            }
-        },
-        resizer = function() {
-            windowHeight = $window.height();
-        },
-        methods = {
-            init: function(options) {
-                var o = $.extend(defaults, options);
-                return this.each(function() {
-                    var stickyElement = $(this);
-
-                    stickyId = stickyElement.attr('id');
-                    wrapper = $('<div></div>')
-                        .attr('id', stickyId + '-sticky-wrapper')
-                        .addClass(o.wrapperClassName);
-                    stickyElement.wrapAll(wrapper);
-                    var stickyWrapper = stickyElement.parent();
-                    stickyWrapper.css('height', stickyElement.outerHeight());
-                    sticked.push({
-                        topSpacing: o.topSpacing,
-                        bottomSpacing: o.bottomSpacing,
-                        stickyElement: stickyElement,
-                        currentTop: null,
-                        stickyWrapper: stickyWrapper,
-                        className: o.className
-                    });
-                });
-            },
-            update: scroller
-        };
-
-    // should be more efficient than using $window.scroll(scroller) and $window.resize(resizer):
-    if (window.addEventListener) {
-        window.addEventListener('scroll', scroller, false);
-        window.addEventListener('resize', resizer, false);
-    } else if (window.attachEvent) {
-        window.attachEvent('onscroll', scroller);
-        window.attachEvent('onresize', resizer);
-    }
-
-    $.fn.sticky = function(method) {
-        if (methods[method]) {
-            return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
-        } else if (typeof method === 'object' || !method ) {
-            return methods.init.apply( this, arguments );
-        } else {
-            $.error('Method ' + method + ' does not exist on jQuery.sticky');
-        }
-    };
-    $(function() {
-        setTimeout(scroller, 0);
-    });
-})(jQuery);
+/**
+ * Sticky
+ *
+ * Keep interface elements fixed in place as the user scrolls.
+ *
+ * Copyright (c) 2013 Kevin Thompson <http://kevinthompson.info>
+ * Dual licensed under the MIT and GPL licenses:
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.gnu.org/licenses/gpl.html
+ *
+ * @author:   Kevin Thompson <kevin@kevinthompson.info>
+ * @link:     https://github.com/kevinthompson/jquery.sticky.js
+ * @version:  2.0.0
+**/
+;(function(e){e.fn.sticky=function(t){var n={offset:20,mode:"fixed",stopper:"",speed:500,classes:{element:"jquery-sticky-element",start:"jquery-sticky-start",sticky:"jquery-sticky-sticky",stopped:"jquery-sticky-stopped",placeholder:"jquery-sticky-placeholder"},onStick:"",onStart:"",onStop:""};this.each(function(){if(t)e.extend(n,t);if(e(this).parent().hasClass(n.classes.element))return;var r={init:function(t){r.element=t.wrap('<div class="'+n.classes.element+'" />').parent();r.units={start:r.element.offset().top};n.states=[n.classes.start,n.classes.sticky,n.classes.stopped].join(" ");if(n.stopper!=""){var s=e(n.stopper),o;if(s.length>0){for(i=0;i<s.length&&typeof r.stopper=="undefined";i++){if(e(s[i]).offset().top>r.element.offset().top+r.element.outerHeight(false)){r.stopper=e(s[i])}}}if(typeof r.stopper!="undefined"&&r.stopper.length>0){o=parseInt(r.stopper.css("margin-top"))||0;r.units.stop=r.stopper.offset().top-o}}r.placeholder=r.element.clone().empty().attr("class",n.classes.placeholder).css({opacity:0,height:r.element.height()}).insertBefore(r.element);r.element.appendTo("body").css({width:r.placeholder.width(),left:r.placeholder.offset().left,top:r.placeholder.offset().top,"margin-bottom":"0px",position:"absolute","z-index":"999"});e(window).bind("resize scroll",function(){r.update()});r.update()},update:function(){var t;r.element.css({width:r.placeholder.width(),left:r.placeholder.offset().left});r.placeholder.css("height",r.element.height());r.units.start=r.placeholder.offset().top;if(r.element.outerHeight(false)+n.offset<e(window).height()){r.units.doctop=e(document).scrollTop();if(r.element.hasClass(n.classes.sticky)&&n.mode=="animate"){r.animate(r.units.doctop+n.offset)}if(typeof r.stopper!="undefined"&&r.stopper.length>0){t=parseInt(r.stopper.css("margin-top"))||0;r.units.stop=r.stopper.offset().top-t}if(!r.element.hasClass(n.classes.stopped)&&typeof r.stopper!="undefined"&&r.stopper.length>0&&r.units.doctop+n.offset+r.element.outerHeight(false)>=r.units.stop){r.stop(r.units.stop-r.element.outerHeight(false),"stop");if(typeof n.onStop=="function")n.onStop()}else if(!r.element.hasClass(n.classes.sticky)&&r.units.doctop>r.units.start-n.offset&&(typeof r.stopper=="undefined"||r.stopper.length==0||r.stopper.length>0&&r.units.doctop+n.offset+r.element.outerHeight(false)<r.units.stop)){r.stick(n.offset);if(n.mode=="animate")r.animate(r.units.doctop+n.offset);if(typeof n.onStick=="function")n.onStick()}else if(r.units.doctop<=r.units.start-n.offset){r.stop(r.units.start,"start");if(typeof n.onStart=="function")n.onStart()}}else if(!r.element.hasClass(n.classes.start)){r.stop(r.units.start,"start")}},animate:function(e){clearTimeout(r.timer);r.timer=setTimeout(function(){if(e>=r.units.stop){e=r.units.stop-r.element.outerHeight(false)}else if(e<=r.units.start){e=r.units.start}r.element.stop().animate({top:e},n.speed)},100)},stick:function(e){r.element.removeClass(n.states).addClass(n.classes.sticky);if(n.mode=="fixed"){r.element.css({top:e,position:"fixed"})}},stop:function(e,t){r.element.removeClass(n.states).addClass(t=="start"?n.classes.start:n.classes.stopped);if(n.mode=="fixed"){r.element.css({top:e,position:"absolute"})}else{r.animate(t=="start"?r.units.start:r.units.stop-r.element.outerHeight(false))}}};r.init(e(this))})}})(jQuery)
